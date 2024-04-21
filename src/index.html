@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Solar System Simulation</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<div id="controls">
+    <label for="rotationSpeed">Rotation Speed:</label>
+    <input type="range" id="rotationSpeed" min="0" max="0.05" step="0.001" value="0.01">
+
+    <label for="orbitSpeed">Orbit Speed:</label>
+    <input type="range" id="orbitSpeed" min="0" max="0.05" step="0.001" value="0.01">
+
+    <label for="planetSelect">Focus on Planet:</label>
+    <select id="planetSelect">
+        <option value="Sun">Sun</option>
+        <option value="Mercury">Mercury</option>
+        <option value="Venus">Venus</option>
+        <option value="Earth">Earth</option>
+        <option value="Mars">Mars</option>
+        <option value="Jupiter">Jupiter</option>
+        <option value="Saturn">Saturn</option>
+        <option value="Uranus">Uranus</option>
+        <option value="Neptune">Neptune</option>
+    </select>
+    <script src="bundle.js"></script>
+</div>
+</body>
+</html>

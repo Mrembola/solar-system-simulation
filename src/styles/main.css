@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+}
+canvas {
+    display: block;
+}
+#controls {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    user-select: none;
+}
+#controls label,
+#controls select,
+#controls input {
+    display: block;
+    margin-bottom: 10px;
+}
