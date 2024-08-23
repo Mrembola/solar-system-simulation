@@ -44,6 +44,20 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.minDistance = 5; // Sets the minimum zoom distance to prevent the camera from getting too close.
 controls.maxDistance = 500; // Sets the maximum zoom distance to prevent the camera from zooming too far out.
 
+// Add lighting
+// 1. Add a DirectionalLight to simulate sunlight
+const sunLight = new THREE.DirectionalLight(0xffffff, 1); // White light with intensity 1
+sunLight.position.set(100, 100, 100); // Position the light to simulate the sun's position
+scene.add(sunLight);
+
+//  add shadows for more realism
+sunLight.castShadow = true;
+renderer.shadowMap.enabled = true;
+
+// 2. Add AmbientLight to soften shadows and illuminate dark areas
+const ambientLight = new THREE.AmbientLight(0x404040, 0.5); // Soft white light with half intensity
+scene.add(ambientLight);
+
 // Calls the function to create planets and add them to the scene.
 createPlanets(scene);
 

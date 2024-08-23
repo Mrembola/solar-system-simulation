@@ -16,10 +16,19 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
-        new BundleAnalyzerPlugin()
+        new BundleAnalyzerPlugin({
+            analyzerPort: 8889
+        })
     ],
     module: {
         rules: [
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/[name][ext]'
+                },
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
